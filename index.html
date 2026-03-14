@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillLink - Skill Exchange In-Person & Locally</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-link"></i>
+                    <span>SkillLink</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#why-skilllink">Why SkillLink</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="browse-users.html">Browse Users</a></li>
+                </ul>
+                <div class="nav-actions" id="navActions">
+                    <a href="#" class="btn-secondary" id="openLoginModal">Log In</a>
+                    <a href="#" class="btn-primary">Start Exchanging</a>
+                </div>
+                <div class="nav-actions" id="navActionsLoggedIn" style="display: none;">
+                    <a href="profile.html" class="btn-secondary" id="profileLink">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    <a href="browse-users.html" class="btn-primary">Browse Users</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Learn and Share Skills. In Person. Locally.</h1>
+                <p class="hero-subtitle">Skill exchange in your community: from photography to Excel.</p>
+                <a href="#" class="btn-primary btn-large">Start Exchanging</a>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Skills Available</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Successful Exchanges</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-illustration">
+                    <div class="illustration-circle circle-1"></div>
+                    <div class="illustration-circle circle-2"></div>
+                    <div class="illustration-circle circle-3"></div>
+                    <i class="fas fa-users illustration-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to start exchanging skills in your community</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-edit"></i>
+                    </div>
+                    <h3>List Your Skills</h3>
+                    <p>Tell us what you can teach and what you want to learn. From programming to cooking.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h3>Find a Match</h3>
+                    <p>Our system will find the ideal skill exchange partner near you.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Meet & Exchange</h3>
+                    <p>Meet in person, share skills, and earn credits for future learning.</p>
+                </div>
+            </div>
+
+            <div class="credit-system">
+                <div class="credit-content">
+                    <h3>Credit System</h3>
+                    <div class="credit-flow">
+                        <div class="credit-item">
+                            <div class="credit-icon teach">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h4>Teach → Earn</h4>
+                            <p>Share your skills and earn credits to use for learning.</p>
+                        </div>
+                        <div class="credit-arrow">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="credit-item">
+                            <div class="credit-icon learn">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Spend → Learn</h4>
+                            <p>Use earned credits to learn new skills from other members.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Platform Features</h2>
+            <p class="section-subtitle">Everything you need for safe and effective skill exchange</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Geolocation Matching</h3>
+                    <p>Find skill partners nearby. Meet conveniently and safely.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Profile Verification</h3>
+                    <p>All profiles are verified to ensure community trust and safety.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Secure Chat</h3>
+                    <p>Communicate with partners through our secure built-in chat before meeting.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Review System</h3>
+                    <p>Leave feedback after exchanges to maintain high community quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why SkillLink -->
+    <section id="why-skilllink" class="why-skilllink">
+        <div class="container">
+            <div class="why-content">
+                <div class="why-text">
+                    <h2 class="section-title">Why SkillLink?</h2>
+                    <p class="why-description">
+                        Unlike online courses (Skillshare, Udemy) or task-based services (TaskRabbit),
+                        SkillLink focuses on <strong>in-person interaction</strong> and <strong>mutual exchange</strong>.
+                    </p>
+                    <div class="why-points">
+                        <div class="why-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real communication and hands-on experience</span>
+                        </div>
+                        <div class="why-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fair exchange without monetary transactions</span>
+                        </div>
+                        <div class="why-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Building a real community in your city</span>
+                        </div>
+                        <div class="why-point">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Flexibility: teach and learn simultaneously</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-image">
+                    <div class="comparison-card">
+                        <div class="comparison-item">
+                            <h4>Online Courses</h4>
+                            <ul>
+                                <li><i class="fas fa-times"></i> No personal interaction</li>
+                                <li><i class="fas fa-times"></i> One-way learning</li>
+                                <li><i class="fas fa-times"></i> Paid subscriptions</li>
+                            </ul>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="comparison-item skilllink">
+                            <h4>SkillLink</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> In-person meetings</li>
+                                <li><i class="fas fa-check"></i> Mutual exchange</li>
+                                <li><i class="fas fa-check"></i> Free with credits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Partners -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Our Community</h2>
+            <p class="section-subtitle">Join our growing community in Vancouver</p>
+            
+            <div class="community-stats">
+                <div class="community-stat">
+                    <i class="fas fa-users"></i>
+                    <h3>500+</h3>
+                    <p>Active Members</p>
+                </div>
+                <div class="community-stat">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>15+</h3>
+                    <p>Vancouver Neighborhoods</p>
+                </div>
+                <div class="community-stat">
+                    <i class="fas fa-book"></i>
+                    <h3>200+</h3>
+                    <p>Different Skills</p>
+                </div>
+            </div>
+
+            <div class="partners">
+                <h3>Our Partners</h3>
+                <div class="partners-grid">
+                    <div class="partner-logo">
+                        <i class="fas fa-university"></i>
+                        <span>UBC Community</span>
+                    </div>
+                    <div class="partner-logo">
+                        <i class="fas fa-building"></i>
+                        <span>Vancouver Community Centre</span>
+                    </div>
+                    <div class="partner-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>SFU Student Union</span>
+                    </div>
+                    <div class="partner-logo">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Local Hubs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing</h2>
+            <p class="section-subtitle">Choose a plan that suits you</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="pricing-price">
+                            <span class="price">Free</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Create a profile</li>
+                        <li><i class="fas fa-check"></i> Basic matching</li>
+                        <li><i class="fas fa-check"></i> Up to 5 exchanges per month</li>
+                        <li><i class="fas fa-check"></i> Secure chat</li>
+                        <li><i class="fas fa-check"></i> Review system</li>
+                    </ul>
+                    <a href="#" class="btn-secondary btn-block">Start for Free</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Popular</div>
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="pricing-price">
+                            <span class="price">$9.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All Basic features</li>
+                        <li><i class="fas fa-check"></i> Enhanced matching</li>
+                        <li><i class="fas fa-check"></i> Unlimited exchanges</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Exclusive events</li>
+                    </ul>
+                    <a href="#" class="btn-primary btn-block">Choose Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-link"></i>
+                        <span>SkillLink</span>
+                    </div>
+                    <p>Connecting people through skill exchange. In person. Local. Authentic.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Safety</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SkillLink. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <h2>Log In to SkillLink</h2>
+                <button class="login-modal-close" id="closeLoginModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        Username
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter your username"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary btn-block">Log In</button>
+                <div class="login-form-footer">
+                    <p>No account? <a href="#" id="showSignup">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="login-modal" id="signupModal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <h2>Sign Up for SkillLink</h2>
+                <button class="login-modal-close" id="closeSignupModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="login-form" id="signupForm">
+                <div class="form-group">
+                    <label for="signup-username">
+                        <i class="fas fa-user"></i>
+                        Username
+                    </label>
+                    <input 
+                        type="text" 
+                        id="signup-username" 
+                        name="username" 
+                        placeholder="Choose a username"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </label>
+                    <input 
+                        type="email" 
+                        id="signup-email" 
+                        name="email" 
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input 
+                        type="password" 
+                        id="signup-password" 
+                        name="password" 
+                        placeholder="Create a password"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">
+                        <i class="fas fa-lock"></i>
+                        Confirm Password
+                    </label>
+                    <input 
+                        type="password" 
+                        id="signup-confirm-password" 
+                        name="confirmPassword" 
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+                <button type="submit" class="btn-primary btn-block">Sign Up</button>
+                <div class="login-form-footer">
+                    <p>Already have an account? <a href="#" id="showLogin">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

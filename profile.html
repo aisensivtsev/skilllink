@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - SkillLink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-link"></i>
+                    <a href="index.html" style="text-decoration: none; color: inherit;"><span>SkillLink</span></a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#why-skilllink">Why SkillLink</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="browse-users.html">Browse Users</a></li>
+                </ul>
+                <div class="nav-actions" id="navActions" style="display: none;">
+                    <a href="#" class="btn-secondary" id="openLoginModal">Log In</a>
+                    <a href="#" class="btn-primary">Start Exchanging</a>
+                </div>
+                <div class="nav-actions" id="navActionsLoggedIn">
+                    <a href="profile.html" class="btn-secondary" id="profileLink">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    <a href="browse-users.html" class="btn-primary">Browse Users</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Page -->
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <div class="profile-header">
+                <h2 class="section-title">My Profile</h2>
+                <button class="btn-secondary" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Log Out
+                </button>
+            </div>
+            
+            <div class="profile-content">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3 id="profile-username">Username</h3>
+                    <p id="profile-email">email@example.com</p>
+                </div>
+
+                <div class="profile-form-container">
+                    <form class="profile-form" id="profileForm">
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Personal Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="profile-name">
+                                    <i class="fas fa-id-card"></i>
+                                    Full Name
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="profile-name" 
+                                    name="name" 
+                                    placeholder="Enter your full name"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profile-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Location
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="profile-location" 
+                                    name="location" 
+                                    placeholder="City, Country (e.g., Vancouver, Canada)"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profile-bio">
+                                    <i class="fas fa-info-circle"></i>
+                                    Bio
+                                </label>
+                                <textarea 
+                                    id="profile-bio" 
+                                    name="bio" 
+                                    rows="4"
+                                    placeholder="Tell us about yourself..."
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-tools"></i> Skills I Can Teach</h3>
+                            <div class="skills-input-container">
+                                <div class="skills-input-wrapper">
+                                    <input 
+                                        type="text" 
+                                        id="skill-input" 
+                                        placeholder="Add a skill (e.g., Photography, Excel, Cooking)"
+                                    >
+                                    <button type="button" class="btn-primary" id="addSkillBtn">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                                <div class="skills-list" id="skillsList">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-graduation-cap"></i> Skills I Want to Learn</h3>
+                            <div class="skills-input-container">
+                                <div class="skills-input-wrapper">
+                                    <input 
+                                        type="text" 
+                                        id="learn-skill-input" 
+                                        placeholder="Add a skill you want to learn"
+                                    >
+                                    <button type="button" class="btn-primary" id="addLearnSkillBtn">
+                                        <i class="fas fa-plus"></i> Add
+                                    </button>
+                                </div>
+                                <div class="skills-list" id="learnSkillsList">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-large btn-block">
+                            <i class="fas fa-save"></i> Save Profile
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="login-modal" id="loginModal">
+        <div class="login-modal-content">
+            <div class="login-modal-header">
+                <h2>Log In to SkillLink</h2>
+                <button class="login-modal-close" id="closeLoginModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        Username
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter your username"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary btn-block">Log In</button>
+                <div class="login-form-footer">
+                    <p>No account? <a href="index.html" id="showSignup">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if (!isLoggedIn()) {
+            window.location.href = 'index.html';
+        } else {
+            loadProfile();
+        }
+    </script>
+</body>
+</html>
+
